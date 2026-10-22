@@ -39,7 +39,7 @@ quote-style = 'single'
 
 [tool.pytest]
 pythonpath = ['.']
-addopts = ['-p', 'no:warnings', '--cov=biblicoteca_fastapi', '--cov-context=test']
+addopts = ['-p', 'no:warnings', '--cov=biblioteca_fastapi', '--cov-context=test']
 
 [tool.typos.files]
 extend-exclude = ["*.md", "migrations"]
@@ -57,6 +57,6 @@ format.sequence = [
 serve = "fastapi dev biblicoteca_fastapi/app.py"
 test.sequence = [
   "lint",
-  { cmd = "pytest -s -x --cov=Biblicoteca_fastapi --cov-report=term-missing -vv $POE_EXTRA_ARGS" },
+  { cmd = "pytest -s -x --cov=biblioteca_fastapi --cov-report=term-missing -vv $POE_EXTRA_ARGS" },
   { cmd = "coverage html --show-contexts" },
 ]
