@@ -22,6 +22,10 @@ class User(Base):
         DateTime,
         default=func.now(),
     )
+    update = Column(
+        DateTime,
+        default=func.now(),
+    )
 
     def __init__(self, username, email, password, ativo=True):
         self.username = username
